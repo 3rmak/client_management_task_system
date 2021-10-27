@@ -1,0 +1,103 @@
+li {
+    margin: 10px 0px;
+}
+
+.list-header:hover::after {
+    content: attr(dataTitle);
+    position: absolute;
+    left: 150px; right: 0; bottom: 8px;
+    z-index: 1;
+}
+
+.fixedButtons {
+    width: 10%;
+    z-index: 2;
+    position: fixed;
+    left: 87%; top: 11.2%;
+}
+
+.fixedButtons > button {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+    /*background: transparent;*/
+}
+
+.removeButton:hover {
+    cursor: pointer;
+    text-decoration: none ;
+    color: darkred;
+}
+
+.sortSelect {
+    margin-left: 1.5rem;
+    width: 98%;
+}
+
+.taskContainer {
+    border-radius: 10px;
+    padding: 30px;
+    width: 40%;
+    min-width: 20%;
+    max-width: 40%;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.taskEditContainer, .taskCreateContainer {
+    border-radius: 10px;
+    padding: 30px;
+    min-width: 20%;
+    max-width: 40%;
+    width: 40%;
+    height: 47%;
+    min-height: 47%;
+    max-height: 47%;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.taskOptions tr {
+    padding: 5px;
+}
+
+.taskListItem {
+    height: 60px;
+    display:flex;
+    align-items:center;
+    width: 100%;
+}
+
+.taskListItem table {
+    border: 1px #dfd5b3 solid;
+    width: 15%;
+    background: #f8f9fa;
+    text-decoration: none;
+    display: none;
+}
+
+.taskListItem:hover table {
+    justify-content:center;
+    align-items:center;
+    height: 42px;
+    display: flex;
+    animation: hover_on 0.25s, margin-right .5s ease;
+}
+
+@keyframes hover_on {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        margin-right: 0%;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        margin-right: 5%;
+    }
+}
